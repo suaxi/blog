@@ -1,4 +1,4 @@
-package com.sw.blog.config;
+package com.sw.blog.configure;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,7 +37,7 @@ public class SwaggerConfig {
                 "blog with SpringBoot and Layui",
                 "1.0.0-SNAPSHOT",
                 null,
-                new Contact("suaxi", "https://www.wangchouchou.com", ""),
+                new Contact("suaxi", "https://www.wangchouchou.com", "demo@qq.com"),
                 "Apache 2.0", "https://www.apache.org/licenses/LICENSE-2.0.html", Collections.emptyList()
         );
     }

@@ -1,4 +1,4 @@
-package com.sw.blog.config;
+package com.sw.blog.configure;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
