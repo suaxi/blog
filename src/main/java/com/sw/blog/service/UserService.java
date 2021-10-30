@@ -45,4 +45,13 @@ public interface UserService {
      * @return
      */
     Page<User> findUserPage(int pageNum ,int pageSize);
+
+    /**
+     * 修改密码
+     * @param userId
+     * @param password
+     * @return
+     */
+    boolean updatePassword(Integer userId, String password);
+
 }

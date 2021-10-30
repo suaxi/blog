@@ -58,4 +58,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public Page<User> findUserPage(int pageNum, int pageSize) {
         return this.baseMapper.selectPage(new Page<>(pageNum, pageSize), new QueryWrapper<>());
     }
+
+    @Override
+    public boolean updatePassword(Integer userId, String password) {
+        User user = new User();
+        user.setUserId(userId);
+        user.setPassword(passwordEncoder.encode(password));
+        return updateById(user);
+    }
+
 }

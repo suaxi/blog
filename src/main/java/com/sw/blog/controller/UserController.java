@@ -78,4 +78,26 @@ public class UserController extends BaseController {
     public ResponseResult<Page> findUserPage(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize) {
         return new ResponseResult<>(SUCCESS, userService.findUserPage(pageNum, pageSize));
     }
+
+    @ApiOperation("用户名校验")
+    @ApiImplicitParam(name = "username", value = "用户名", required = true, paramType = "path", dataType = "String")
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    @GetMapping("/checkUsername/{username}")
+    public ResponseResult<Boolean> checkUsername(@NotNull @PathVariable("username") String username) {
+        return new ResponseResult<>(SUCCESS, userService.findUserByName(username) == null);
+    }
+
+    @ApiOperation("修改密码")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "userId", value = "用户ID", required = true, paramType = "path", dataType = "Integer"),
+            @ApiImplicitParam(name = "password", value = "密码", required = true, paramType = "path", dataType = "String")
+    })
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    @PutMapping("/updatePassword/{userId}/{password}")
+    public ResponseResult<Boolean> updatePassword(@NotNull @PathVariable("userId") Integer userId, @NotNull @PathVariable("password") String password) {
+        if (userService.updatePassword(userId, password)) {
+            return new ResponseResult<>(SUCCESS, "用户密码修改成功！");
+        }
+        return new ResponseResult<>(FAIL, "用户密码修改失败！");
+    }
 }
