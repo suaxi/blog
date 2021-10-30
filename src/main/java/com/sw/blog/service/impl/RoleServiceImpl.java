@@ -1,6 +1,7 @@
 package com.sw.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sw.blog.mapper.RoleMapper;
 import com.sw.blog.pojo.Role;
@@ -18,7 +19,6 @@ import java.util.Arrays;
  */
 @Service
 public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements RoleService {
-
 
     @Override
     public Role findRoleById(Integer roleId) {
@@ -54,5 +54,10 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
     @Transactional(rollbackFor = Exception.class)
     public boolean deleteRoleByIds(String[] roleIds) {
         return this.removeByIds(Arrays.asList(roleIds));
+    }
+
+    @Override
+    public Page<Role> findRolePage(int pageNum, int pageSize) {
+        return this.baseMapper.selectPage(new Page<>(pageNum, pageSize), new QueryWrapper<>());
     }
 }

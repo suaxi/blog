@@ -1,5 +1,6 @@
 package com.sw.blog.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sw.blog.pojo.User;
 
 /**
@@ -36,4 +37,12 @@ public interface UserService {
      * @return
      */
     boolean deleteUserByIds(String[] userIds);
+
+    /**
+     * 查询用户列表（分页）
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    Page<User> findUserPage(int pageNum ,int pageSize);
 }

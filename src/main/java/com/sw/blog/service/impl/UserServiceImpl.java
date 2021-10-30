@@ -1,6 +1,7 @@
 package com.sw.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sw.blog.mapper.UserMapper;
 import com.sw.blog.pojo.User;
@@ -51,5 +52,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Transactional(rollbackFor = Exception.class)
     public boolean deleteUserByIds(String[] userIds) {
         return this.removeByIds(Arrays.asList(userIds));
+    }
+
+    @Override
+    public Page<User> findUserPage(int pageNum, int pageSize) {
+        return this.baseMapper.selectPage(new Page<>(pageNum, pageSize), new QueryWrapper<>());
     }
 }

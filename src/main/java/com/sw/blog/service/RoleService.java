@@ -1,5 +1,6 @@
 package com.sw.blog.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sw.blog.pojo.Role;
 
 /**
@@ -43,4 +44,12 @@ public interface RoleService {
      * @return
      */
     boolean deleteRoleByIds(String[] roleIds);
+
+    /**
+     * 查询角色（分页）
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    Page<Role> findRolePage(int pageNum , int pageSize);
 }

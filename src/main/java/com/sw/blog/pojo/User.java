@@ -43,7 +43,7 @@ public class User implements Serializable {
     @TableField(value = "STATUS")
     private String status;
 
-    @ApiModelProperty(value = "用户ID")
+    @ApiModelProperty(value = "最后登录时间")
     @TableField(value = "LAST_LOGIN_TIME")
     private Date lastLoginTime;
 
