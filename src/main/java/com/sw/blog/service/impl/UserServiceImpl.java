@@ -3,8 +3,11 @@ package com.sw.blog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sw.blog.constant.StringConstant;
 import com.sw.blog.mapper.UserMapper;
 import com.sw.blog.pojo.User;
+import com.sw.blog.pojo.UserRole;
+import com.sw.blog.service.UserRoleService;
 import com.sw.blog.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +28,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private UserRoleService userRoleService;
+
     @Override
     public User findUserByName(String username) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
@@ -38,19 +44,34 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Transactional(rollbackFor = Exception.class)
     public boolean createUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return this.save(user);
+        boolean flag = this.save(user);
+        if (flag) {
+            UserRole userRole = new UserRole();
+            userRole.setUserId(user.getUserId());
+            userRole.setRoleId(user.getRoleId());
+            userRoleService.createUserRole(userRole);
+        }
+        return flag;
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
     public boolean updateUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return this.updateById(user);
+        boolean flag = this.updateById(user);
+        if (flag) {
+            userRoleService.deleteByUserIds(String.valueOf(user.getUserId()).split(StringConstant.COMMA));
+            UserRole userRole = new UserRole();
+            userRole.setUserId(user.getUserId());
+            userRole.setRoleId(user.getRoleId());
+        }
+        return flag;
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
     public boolean deleteUserByIds(String[] userIds) {
+        userRoleService.deleteByUserIds(userIds);
         return this.removeByIds(Arrays.asList(userIds));
     }
 
