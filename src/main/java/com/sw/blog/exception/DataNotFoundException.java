@@ -1,9 +1,9 @@
 package com.sw.blog.exception;
 
 /**
- * @Description 业务异常
- * @Author suaxi
- * @Date 2021/10/29 14:49
+ * @description 业务异常
+ * @author suaxi
+ * @date 2021/10/29 14:49
  */
 public class DataNotFoundException extends RuntimeException{
 

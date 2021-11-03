@@ -12,9 +12,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 15:28
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 15:28
  */
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)

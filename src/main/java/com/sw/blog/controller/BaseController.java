@@ -5,9 +5,9 @@ import com.sw.blog.pojo.ResponseResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
- * @Description controller基类
- * @Author suaxi
- * @Date 2021/10/29 14:47
+ * @description controller基类
+ * @author suaxi
+ * @date 2021/10/29 14:47
  */
 public abstract class BaseController {
 

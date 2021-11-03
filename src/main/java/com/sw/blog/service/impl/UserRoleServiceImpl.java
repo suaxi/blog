@@ -10,9 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Arrays;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:31
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:31
  */
 @Service
 public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole> implements UserRoleService {

@@ -1,9 +1,9 @@
 package com.sw.blog.exception;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:49
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:49
  */
 public class InsertException extends RuntimeException{
 

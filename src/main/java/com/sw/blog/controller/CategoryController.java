@@ -15,9 +15,9 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
- * @Description 分类接口
- * @Author Wang Hao
- * @Date 2021/11/3 16:55
+ * @description 分类接口
+ * @author Wang Hao
+ * @date 2021/11/3 16:55
  */
 @RestController
 @RequestMapping("/category")

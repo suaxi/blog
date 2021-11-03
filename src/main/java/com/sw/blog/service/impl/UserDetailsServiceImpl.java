@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description 重写loadUserByUsername方法
- * @Author suaxi
- * @Date 2021/10/29 15:20
+ * @description 重写loadUserByUsername方法
+ * @author suaxi
+ * @date 2021/10/29 15:20
  */
 @Component
 public class UserDetailsServiceImpl implements UserDetailsService {

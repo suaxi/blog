@@ -5,9 +5,9 @@ import com.sw.blog.pojo.Category;
 import java.util.List;
 
 /**
- * @Description
- * @Author Wang Hao
- * @Date 2021/11/3 16:39
+ * @description
+ * @author Wang Hao
+ * @date 2021/11/3 16:39
  */
 public interface CategoryService {
 

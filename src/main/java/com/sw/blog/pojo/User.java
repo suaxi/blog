@@ -10,9 +10,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @Description 用户表
- * @Author suaxi
- * @Date 2021/10/29 13:59
+ * @description 用户表
+ * @author suaxi
+ * @date 2021/10/29 13:59
  */
 @Data
 @ApiModel("用户表")

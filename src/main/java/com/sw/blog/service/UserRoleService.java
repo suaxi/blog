@@ -3,9 +3,9 @@ package com.sw.blog.service;
 import com.sw.blog.pojo.UserRole;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:29
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:29
  */
 public interface UserRoleService {
 

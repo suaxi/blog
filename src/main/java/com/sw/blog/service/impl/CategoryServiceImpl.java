@@ -11,9 +11,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Description
- * @Author Wang Hao
- * @Date 2021/11/3 16:45
+ * @description
+ * @author Wang Hao
+ * @date 2021/11/3 16:45
  */
 @Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {

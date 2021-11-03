@@ -5,9 +5,9 @@ import com.sw.blog.pojo.User;
 import org.springframework.stereotype.Repository;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:07
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:07
  */
 @Repository
 public interface UserMapper extends BaseMapper<User> {

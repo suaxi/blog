@@ -5,9 +5,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @Description 返回响应实体
- * @Author suaxi
- * @Date 2021/10/29 14:44
+ * @description 返回响应实体
+ * @author suaxi
+ * @date 2021/10/29 14:44
  */
 @Data
 @ApiModel("返回响应实体")

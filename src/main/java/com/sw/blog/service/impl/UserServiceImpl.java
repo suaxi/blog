@@ -18,9 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Arrays;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:13
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:13
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {

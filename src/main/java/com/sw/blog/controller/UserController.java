@@ -17,9 +17,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:36
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:36
  */
 @RestController
 @RequestMapping("/user")

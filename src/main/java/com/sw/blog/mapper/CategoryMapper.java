@@ -5,9 +5,9 @@ import com.sw.blog.pojo.Category;
 import org.springframework.stereotype.Repository;
 
 /**
- * @Description
- * @Author Wang Hao
- * @Date 2021/11/3 16:38
+ * @description
+ * @author Wang Hao
+ * @date 2021/11/3 16:38
  */
 @Repository
 public interface CategoryMapper extends BaseMapper<Category> {

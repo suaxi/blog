@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sw.blog.pojo.User;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:10
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:10
  */
 public interface UserService {
 

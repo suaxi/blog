@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sw.blog.pojo.Role;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/29 14:23
+ * @description
+ * @author suaxi
+ * @date 2021/10/29 14:23
  */
 public interface RoleService {
 

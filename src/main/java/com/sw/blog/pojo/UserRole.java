@@ -9,9 +9,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Description 用户角色关系表
- * @Author suaxi
- * @Date 2021/10/29 13:59
+ * @description 用户角色关系表
+ * @author suaxi
+ * @date 2021/10/29 13:59
  */
 @Data
 @ApiModel("用户角色关系表")

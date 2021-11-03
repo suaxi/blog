@@ -16,9 +16,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 /**
- * @Description 文章接口
- * @Author Wang Hao
- * @Date 2021/11/3 17:02
+ * @description 文章接口
+ * @author Wang Hao
+ * @date 2021/11/3 17:02
  */
 @RestController
 @RequestMapping("/article")

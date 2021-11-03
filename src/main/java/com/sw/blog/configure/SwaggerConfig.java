@@ -13,9 +13,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 import java.util.Collections;
 
 /**
- * @Description
- * @Author suaxi
- * @Date 2021/10/28 11:16
+ * @description
+ * @author suaxi
+ * @date 2021/10/28 11:16
  */
 @Configuration
 @Profile({"dev"})

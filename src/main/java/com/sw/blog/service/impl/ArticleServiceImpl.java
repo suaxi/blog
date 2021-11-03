@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @Description
- * @Author Wang Hao
- * @Date 2021/11/3 16:48
+ * @description
+ * @author Wang Hao
+ * @date 2021/11/3 16:48
  */
 @Service
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements ArticleService {
