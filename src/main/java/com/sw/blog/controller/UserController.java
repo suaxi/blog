@@ -75,7 +75,7 @@ public class UserController extends BaseController {
     })
     @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping("/findUserPage/{pageNum}/{pageSize}")
-    public ResponseResult<Page> findUserPage(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize) {
+    public ResponseResult<Page<User>> findUserPage(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize) {
         return new ResponseResult<>(SUCCESS, userService.findUserPage(pageNum, pageSize));
     }
 

@@ -75,7 +75,7 @@ public class RoleController extends BaseController {
     })
     @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping("/findRolePage/{pageNum}/{pageSize}")
-    public ResponseResult<Page> findRolePage(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize) {
+    public ResponseResult<Page<Role>> findRolePage(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize) {
         return new ResponseResult<>(SUCCESS, roleService.findRolePage(pageNum, pageSize));
     }
 }
