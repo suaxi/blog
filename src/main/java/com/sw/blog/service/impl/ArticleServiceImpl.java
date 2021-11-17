@@ -40,7 +40,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
-    public Page<Article> findArticlePage(String title, String tag, int pageNum, int pageSize) {
+    public Page<Article> findArticlePage(String title, String tag, Integer pageNum, Integer pageSize) {
         QueryWrapper<Article> queryWrapper = new QueryWrapper<>();
         if (StringUtils.isNotBlank(title)) {
             queryWrapper.lambda().like(Article::getTitle, title);

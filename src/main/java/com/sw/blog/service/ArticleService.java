@@ -47,5 +47,5 @@ public interface ArticleService {
      * @param pageSize
      * @return
      */
-    Page<Article> findArticlePage(String title, String tag, int pageNum, int pageSize);
+    Page<Article> findArticlePage(String title, String tag, Integer pageNum, Integer pageSize);
 }

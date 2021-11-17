@@ -44,7 +44,7 @@ public interface UserService {
      * @param pageSize
      * @return
      */
-    Page<User> findUserPage(int pageNum ,int pageSize);
+    Page<User> findUserPage(Integer pageNum ,Integer pageSize);
 
     /**
      * 修改密码

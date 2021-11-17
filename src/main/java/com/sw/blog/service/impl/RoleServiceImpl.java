@@ -57,7 +57,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
     }
 
     @Override
-    public Page<Role> findRolePage(int pageNum, int pageSize) {
+    public Page<Role> findRolePage(Integer pageNum, Integer pageSize) {
         return this.baseMapper.selectPage(new Page<>(pageNum, pageSize), new QueryWrapper<>());
     }
 }

@@ -18,7 +18,7 @@ import java.util.Date;
 @TableName(value = "t_article")
 public class Article implements Serializable {
 
-    @ApiModelProperty(value = "ARTICLE_ID")
+    @ApiModelProperty(value = "ID")
     @TableId(value = "ARTICLE_ID", type = IdType.AUTO)
     private Integer articleId;
 

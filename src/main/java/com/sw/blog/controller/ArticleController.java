@@ -62,8 +62,8 @@ public class ArticleController extends BaseController {
             @ApiImplicitParam(name = "pageSize", value = "页面大小", required = true, paramType = "path", dataType = "Integer")
     })
     @GetMapping("/findArticlePage/{pageNum}/{pageSize}")
-    public ResponseResult<Page<Article>> findArticlePageByTitle(@NotNull @PathVariable("pageNum") Integer pageNum,
-                                                                @NotNull @PathVariable("pageSize") Integer pageSize) {
+    public ResponseResult<Page<Article>> findArticlePage(@NotNull @PathVariable("pageNum") Integer pageNum,
+                                                         @NotNull @PathVariable("pageSize") Integer pageSize) {
         return new ResponseResult<>(SUCCESS, articleService.findArticlePage(null, null, pageNum, pageSize));
     }
 

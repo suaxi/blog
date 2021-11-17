@@ -76,7 +76,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public Page<User> findUserPage(int pageNum, int pageSize) {
+    public Page<User> findUserPage(Integer pageNum, Integer pageSize) {
         return this.baseMapper.selectPage(new Page<>(pageNum, pageSize), new QueryWrapper<>());
     }
 

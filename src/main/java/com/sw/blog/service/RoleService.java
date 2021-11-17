@@ -51,5 +51,5 @@ public interface RoleService {
      * @param pageSize
      * @return
      */
-    Page<Role> findRolePage(int pageNum , int pageSize);
+    Page<Role> findRolePage(Integer pageNum , Integer pageSize);
 }
