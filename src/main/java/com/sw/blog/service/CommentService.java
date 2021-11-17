@@ -39,6 +39,14 @@ public interface CommentService {
     boolean deleteCommentByIds(String[] commentIds);
 
     /**
+     * 评论审核
+     * @param commentId
+     * @param status
+     * @return
+     */
+    boolean reviewComment(Integer commentId, String status);
+
+    /**
      * 分页查询
      * @param articleId
      * @param username

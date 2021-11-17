@@ -63,10 +63,7 @@ public class CommentController extends BaseController {
     })
     @PostMapping("/reviewComment/{id}/{status}")
     public ResponseResult<Boolean> reviewComment(@NotNull @PathVariable("id") Integer id, @NotNull @PathVariable("status") String status) {
-        Comment comment = new Comment();
-        comment.setCommentId(id);
-        comment.setStatus(Status.parseOf(status));
-        return new ResponseResult<>(SUCCESS, commentService.updateComment(comment));
+        return new ResponseResult<>(SUCCESS, commentService.reviewComment(id, status));
     }
 
 

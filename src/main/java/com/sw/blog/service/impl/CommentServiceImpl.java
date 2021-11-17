@@ -43,12 +43,20 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     }
 
     @Override
+    public boolean reviewComment(Integer commentId, String status) {
+        Comment comment = new Comment();
+        comment.setCommentId(commentId);
+        comment.setStatus(Status.parseOf(status));
+        return updateById(comment);
+    }
+
+    @Override
     public Page<Comment> findCommentPage(Integer articleId, String username, String status, Integer pageNum, Integer pageSize) {
         QueryWrapper<Comment> queryWrapper = new QueryWrapper<>();
-        if (StringUtils.isNotBlank(String.valueOf(articleId))) {
+        if (StringUtils.isNotBlank(String.valueOf(articleId)) && articleId != null) {
             queryWrapper.lambda().eq(Comment::getArticleId, articleId);
         }
-        if (StringUtils.isNotBlank(username)) {
+        if (StringUtils.isNotBlank(username) && username != null) {
             queryWrapper.lambda().like(Comment::getUsername, username);
         }
         if (StringUtils.isNotBlank(status)) {
