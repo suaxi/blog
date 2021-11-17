@@ -101,7 +101,7 @@ public class CommentController extends BaseController {
             @ApiImplicitParam(name = "pageNum", value = "页数", required = true, paramType = "path", dataType = "Integer"),
             @ApiImplicitParam(name = "pageSize", value = "页面大小", required = true, paramType = "path", dataType = "Integer")
     })
-    @GetMapping("/findCommentPageByArticleId/{username}/{pageNum}/{pageSize}")
+    @GetMapping("/findCommentPageByUsername/{username}/{pageNum}/{pageSize}")
     public ResponseResult<Page<Comment>> findCommentPageByUsername(@NotNull @PathVariable("username") String username,
                                                                    @NotNull @PathVariable("pageNum") Integer pageNum,
                                                                    @NotNull @PathVariable("pageSize") Integer pageSize) {
